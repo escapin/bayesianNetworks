@@ -1,12 +1,12 @@
 #  Machine Learning for Fault Detection of Energy Consumption #
 
 A machine learning approach for fault detection of enery consumption
-values in a relax room.
+values in a room.
 
 ![Alt The relax room](img/room.png)
 
 As depicted in the figure above, there is only one door to access the
-room. On the opposite side there is a window. In the bottom-right corner
+room. On the opposite side there is a wide window. In the bottom-right corner
 there are three electrical appliances: a microwave, a kettle, and a
 water dispenser.
 
