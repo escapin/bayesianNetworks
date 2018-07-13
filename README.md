@@ -42,11 +42,13 @@ These sensors communicate with a central unit through (wireless) the
 ZigBee protocol and the data collected are saved in a SQLite
 database.
 
-### Bayesian Networks
+## Bayesian Networks
+
+We use bayesian networks to represent dependencies among the data
+gathered by the four sensors introduced above.
 
 Bayesian networks are data structures that map the relationship between
 events in terms of their probability.
-
 More specifically, a bayesian network is a **direct acyclic graph**
 where each _node_ corresponds to a random variable (either descrete or
 continus) and each _direct arc_ from node _X_ to node _Y_ means that _X_
