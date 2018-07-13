@@ -16,7 +16,9 @@ water dispenser.
 Sofas are placed on the wall in the bottom and on the wall to the left,
 whereas coffee tables and chairs are present in the center of the room.
 
-![Alt The chill-out zone](img/room.png =100x)
+<img src="img/room.png" width="60" alt="The environment">
+
+![Alt The chill-out zone](img/room.png)
 
 
 The room is equipped with the following **sensors**:
