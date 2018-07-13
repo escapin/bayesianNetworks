@@ -43,7 +43,7 @@ _[Conditional Probability Distribution](https://en.wikipedia.org/wiki/Conditiona
 (**CPD**) that quantifies the effect of the parents on the node.
 
 Each _direct arc_ has a specific conditional probability distribution,
-which in case the random variables are descrete, can be represented as a
+which in case the random variables are discrete, can be represented as a
 _[Conditional Probability Table](https://en.wikipedia.org/wiki/Conditional_probability_table)_
 (**CPT**) listing the probability that the child node takes on each of
 its different values for each combination of values of its parents.
