@@ -12,8 +12,8 @@ room. On the opposite side there is a wide window. In the bottom-right corner
 there are three electrical appliances: a microwave, a kettle, and a
 water dispenser.
 
-Sofas are placed on the sidewalls below and to the left, whereas 
-coffee tables and chairs are present in the center of the room.
+Sofas are placed on the wall in the bottom and on the wall to the left,
+whereas coffee tables and chairs are present in the center of the room.
 
 ![Alt The chill-out zone](img/room.png)
 
@@ -30,21 +30,31 @@ These sensors communicate with a central unit through (wireless) the
 ZigBee protocol and the data collected are saved in a SQLite
 database.
 
-### Bayesian Networks
+## Bayesian Networks
 
 Bayesian networks are data structures that map the relationship between
 events in terms of their probability.
 
-More specifically, a bayesian network is a **direct graph** where each
-_node_ corresponds to a random variable (either descrete or continuuus)
+More specifically, a bayesian network is a **direct acyclic graph** where each
+_node_ corresponds to a random variable (either descrete or continus)
 and each _direct arc_ from node _X_ to node _Y_ means that _X_ has a
 _direct influence_ on _Y_.  This direct influence is called
-*[Conditional Probability Distribution](https://en.wikipedia.org/wiki/Conditional_probability_distribution)*
-(CPD) that quantifies the effect of the parents on the node.
+_[Conditional Probability Distribution](https://en.wikipedia.org/wiki/Conditional_probability_distribution)_
+(**CPD**) that quantifies the effect of the parents on the node.
 
+Each _direct arc_ has a specific conditional probability distribution,
+which in case the random variables are descrete, can be represented as a
+_[Conditional Probability Table]_(https://en.wikipedia.org/wiki/Conditional_probability_table)
+(**CPT**) listing the probability that the child node takes on each of
+its different values for each combination of values of its parents.
 
+### Learning
 
-## Dependencies
+The topology (structure) and the parameters of each CPD can be both
+learned from data.  However, since learning structure is much harder
+than learning parameters, we have designed the topology of the network
+according to our intuition and the method given in Chapter 14.2 ##
+Dependencies
 
 * MATLAB (https://www.mathworks.com/products/matlab.html)
 * The Bayes Net Toolbox (BNT) for MATLAB (https://github.com/bayesnet/bnt)
