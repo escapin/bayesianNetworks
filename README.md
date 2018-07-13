@@ -70,7 +70,7 @@ room.
 
 
 Number | Name | Modelled data 
----------------------------
+------ | ----  | -----------
 1	| MovementSensor	| Motion detection
 2  | Presence (Hidden) | Presence inside the room 
 
