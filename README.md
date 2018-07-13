@@ -74,10 +74,10 @@ Number | Name | Modelled data
 1	| MovementSensor	| Motion detection (_binary_)
 2  | Presence (Hidden Node) | Presence inside the room  (_binary_)
 3	| Window			| Window open or close (_binary_)
-4	| Z-Plug			| Energy consumption (Watt)
-5	| TemperatureDoor	| Temperature near the door (Celsius)
-6	| Humidity			| Relative humidity (percent)
-7	| TemperatureWindow	| Temperature near the window (Celsius)
+4	| Z-Plug			| Energy consumption (_Watt_)
+5	| TemperatureDoor	| Temperature near the door (_Celsius_)
+6	| Humidity			| Relative humidity (_percent_)
+7	| TemperatureWindow	| Temperature near the window (_Celsius_)
 
 The picture below shows the structure of our bayesian network.
 
