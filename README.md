@@ -3,7 +3,18 @@
 A machine learning approach for fault detection of enery consumption
 values in a environment.
 
-### Description of the environment
+## Dependencies
+
+* MATLAB (https://www.mathworks.com/products/matlab.html)
+* The Bayes Net Toolbox (BNT) for MATLAB (https://github.com/bayesnet/bnt)
+* `mksqlite`, the MATLAB Mex-DLL to access SQLite databases (https://github.com/AndreasMartin72/mksqlite)
+
+Optional:
+
+* Mozila Firefox (https://www.mozilla.org/en-US/firefox/)
+* The SQLite Manager Firefox Add-on (https://addons.mozilla.org/en-US/firefox/addon/sqlite-manager/)
+
+## Description of the environment
 
 The environment consists in a room of about 20 square meters and it is
 supposed to be used as a chill-out zone.
@@ -29,7 +40,7 @@ These sensors communicate with a central unit through (wireless) the
 ZigBee protocol and the data collected are saved in a SQLite
 database.
 
-## Bayesian Networks
+### Bayesian Networks
 
 Bayesian networks are data structures that map the relationship between
 events in terms of their probability.
@@ -82,17 +93,4 @@ The picture below shows the structure of our bayesian network.
 
 
 
-
-
-## Dependencies
-
-* MATLAB (https://www.mathworks.com/products/matlab.html)
-* The Bayes Net Toolbox (BNT) for MATLAB (https://github.com/bayesnet/bnt)
-* `mksqlite`, the MATLAB Mex-DLL to access SQLite databases (https://github.com/AndreasMartin72/mksqlite)
-
-Optional:
-
-* Mozila Firefox (https://www.mozilla.org/en-US/firefox/)
-* The SQLite Manager Firefox Add-on (https://addons.mozilla.org/en-US/firefox/addon/sqlite-manager/)
-
-## How to
+### How to
