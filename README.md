@@ -45,7 +45,9 @@ database.
 ## Bayesian Networks
 
 We use bayesian networks to represent dependencies among the data
-gathered by the four sensors introduced above.
+gathered by the four sensors introduced above in order to design 
+_[bayesian inference](https://en.wikipedia.org/wiki/Bayesian_inference)_
+procedures, such as fault-detection procedures.
 
 Bayesian networks are data structures that map the relationship between
 events in terms of their probability.
