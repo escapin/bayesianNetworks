@@ -75,8 +75,8 @@ _[Artificial Intelligence: A Modern Approach](http://aima.cs.berkeley.edu/)_.
 The aim of our Bayesian Network is to model the environment (the room) by the data
 gathered from all the sensors.
 
-We define 6 _observable nodes_ that model the output of each sensor and
-1 _hidden node_ that models the possible presence of a person inside the
+We define six _observable nodes_ that model the output of each sensor and
+one _hidden node_ that models the possible presence of a person inside the
 room.
 
 
