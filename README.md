@@ -53,15 +53,15 @@ Bayesian networks are data structures that map the relationship between
 events in terms of their probability.
 More specifically, a bayesian network is a **direct acyclic graph**
 where each _node_ corresponds to a random variable (either descrete or
-continus) and each _direct arc_ from node _X_ to node _Y_ means that _X_
+continus) and each _direct arc_ from node X to node Y means that X
 has a
 _[conditional dependency](https://en.wikipedia.org/wiki/Conditional_dependence)_
-on _Y_.  The direct influence is called
+on Y.  This conditional dependency is defined by a
 _[Conditional Probability Distribution](https://en.wikipedia.org/wiki/Conditional_probability_distribution)_
-(**CPD**) that quantifies the effect of the parents on the child node.
+(**CPD**) that, fore each node, quantifies the effect of the parents on the child node.
 
-Each node in a bayesian network has a specific _CPD_. In case the random
-variables are discrete, the _CPD_ can be represented as a
+In case the random variables are discrete, the _CPD_ can be represented
+as a
 _[Conditional Probability Table](https://en.wikipedia.org/wiki/Conditional_probability_table)_
 (**CPT**). The _CPT_ lists the probability that the child node takes on
 each of its different values for each combination of values of its
