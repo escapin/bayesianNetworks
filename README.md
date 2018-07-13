@@ -71,9 +71,9 @@ room.
 
 Number | Name | Modelled data 
 ------ | ----  | -----------
-1	| MovementSensor	| Motion detection (binary)
-2  | Presence (Hidden) | Presence inside the room  (binary)
-3	| Window			| Window open or close (binary)
+1	| MovementSensor	| Motion detection (_binary_)
+2  | Presence (Hidden Node) | Presence inside the room  (_binary_)
+3	| Window			| Window open or close (_binary_)
 4	| Z-Plug			| Energy consumption (Watt)
 5	| TemperatureDoor	| Temperature near the door (Celsius)
 6	| Humidity			| Relative humidity (percent)
