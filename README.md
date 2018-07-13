@@ -35,29 +35,31 @@ database.
 Bayesian networks are data structures that map the relationship between
 events in terms of their probability.
 
-More specifically, a bayesian network is a **direct acyclic graph** where each
-_node_ corresponds to a random variable (either descrete or continus)
-and each _direct arc_ from node _X_ to node _Y_ means that _X_ has a
-_direct influence_ on _Y_.  This direct influence is called
+More specifically, a bayesian network is a **direct acyclic graph**
+where each _node_ corresponds to a random variable (either descrete or
+continus) and each _direct arc_ from node _X_ to node _Y_ means that _X_
+has a _direct influence_ on _Y_.  The direct influence is called
 _[Conditional Probability Distribution](https://en.wikipedia.org/wiki/Conditional_probability_distribution)_
 (**CPD**) that quantifies the effect of the parents on the node.
 
-Each _direct arc_ has a specific conditional probability distribution,
-which in case the random variables are discrete, can be represented as a
+Each node in a bayesian network has a specific _CPD_. In case the random
+variables are discrete, the _CPD_ can be represented as a
 _[Conditional Probability Table](https://en.wikipedia.org/wiki/Conditional_probability_table)_
-(**CPT**) listing the probability that the child node takes on each of
-its different values for each combination of values of its parents.
+(**CPT**). The _CPT_ lists the probability that the child node takes on
+each of its different values for each combination of values of its
+parents.
+
 
 ### Learning
 
 The topology (structure) and the parameters of each CPD can be both
 learned from data.  However, since learning structure is much harder
 than learning parameters, we have designed the topology of the network
-according to the method given in Chapter 14.2 of
+according to the method given in Chapter 14.2 of the book
 _[Artificial Intelligence: A Modern Approach](http://aima.cs.berkeley.edu/)_.
 
 
-## Dependencies
+## Dependencies
 
 * MATLAB (https://www.mathworks.com/products/matlab.html)
 * The Bayes Net Toolbox (BNT) for MATLAB (https://github.com/bayesnet/bnt)
