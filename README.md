@@ -1,11 +1,12 @@
 # Machine Learning for Fault Detection of Energy Consumption #
 
 A machine learning approach for fault detection of enery consumption
-values in a room.
+values in a environment.
 
-### Description of the room
+### Description of the environment
 
-The room is about 20 square meters and it is supposed to be used as a chill-out zone.
+The environment consists in a room of about 20 square meters and it is
+supposed to be used as a chill-out zone.
 
 As depicted in the figure below, there is only one door to access the
 room. On the opposite side there is a wide window. In the bottom-right corner
@@ -38,9 +39,11 @@ events in terms of their probability.
 More specifically, a bayesian network is a **direct acyclic graph**
 where each _node_ corresponds to a random variable (either descrete or
 continus) and each _direct arc_ from node _X_ to node _Y_ means that _X_
-has a _direct influence_ on _Y_.  The direct influence is called
+has a
+_[conditional dependency](https://en.wikipedia.org/wiki/Conditional_dependence)_
+on _Y_.  The direct influence is called
 _[Conditional Probability Distribution](https://en.wikipedia.org/wiki/Conditional_probability_distribution)_
-(**CPD**) that quantifies the effect of the parents on the node.
+(**CPD**) that quantifies the effect of the parents on the child node.
 
 Each node in a bayesian network has a specific _CPD_. In case the random
 variables are discrete, the _CPD_ can be represented as a
@@ -57,6 +60,28 @@ learned from data.  However, since learning structure is much harder
 than learning parameters, we have designed the topology of the network
 according to the method given in Chapter 14.2 of the book
 _[Artificial Intelligence: A Modern Approach](http://aima.cs.berkeley.edu/)_.
+
+The aim of our bayesian network is to model the environment (the room) by the data
+gathered from all the sensors.
+
+We define six observable nodes that model the output of each sensor and
+one hidden node that models the possible presence of a person inside the
+room.
+
+
+Number | Name | Modelled data 
+---------------------------
+1	| MovementSensor	| Motion detection
+2  | Presence (Hidden) | Presence inside the room 
+
+
+The picture below shows the structure of our Bayesian Network
+
+\begin{center}
+\includegraphics[width=\textwidth]{img/bnet}
+\end{center}
+
+
 
 
 ## Dependencies
