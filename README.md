@@ -3,6 +3,8 @@
 A machine learning approach for fault detection of enery consumption
 values in a room.
 
+### Description of the room
+
 ![Alt The relax room](img/room.png)
 
 As depicted in the figure above, there is only one door to access the
