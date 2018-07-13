@@ -5,16 +5,22 @@ values in a room.
 
 ### Description of the room
 
-![Alt The relax room](img/room.png)
+The room is about 20 square meters and it is supposed to be used as a chill-out zone.
 
-As depicted in the figure above, there is only one door to access the
+As depicted in the figure below, there is only one door to access the
 room. On the opposite side there is a wide window. In the bottom-right corner
 there are three electrical appliances: a microwave, a kettle, and a
 water dispenser.
 
-The room is equipped with the following sensors:
+Sofas are placed on the sidewalls below and to the left, whereas 
+coffee tables are present in the center of the room.
 
-1. an open/close sensor on the windows;
+![Alt The chill-out zone](img/room.png)
+
+
+The room is equipped with the following **sensors**:
+
+1. an open/close sensor for the windows;
 2. a temperature and humidity sensor near the window;
 3. a temperature and movement sensor near the door;
 4. an energy consumption sensor, called _Z-Plug_, on which all the
