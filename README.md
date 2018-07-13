@@ -130,6 +130,6 @@ performed the following steps:
 
 work in progress...
 
-### Bayesian Inference: Fault-Detection
+### Bayesian Inference: Fault-Detection
 
 work in progress...
