@@ -31,8 +31,8 @@ events in terms of their probability.
 
 More specifically, a bayesian network is a **direct graph** where each
 _node_ corresponds to a random variable (either descrete or continuuus)
-and each _direct arc_ from node $X$ to node $Y$ means that X has a
-_direct influence_ on Y.  This direct influence is called
+and each _direct arc_ from node _X_ to node _Y_ means that _X_ has a
+_direct influence_ on _Y_.  This direct influence is called
 *[Conditional Probability Distribution](https://en.wikipedia.org/wiki/Conditional_probability_distribution)*
 (CPD) that quantifies the effect of the parents on the node.
 
