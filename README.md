@@ -77,8 +77,8 @@ Number | Name | Modelled data
 7	| TemperatureWindow	| Temperature near the window (_Celsius_)
 
 The picture below shows the structure of our bayesian network.
+<img src="img/bnet.png" width="750" alt="The Bayesian Network">
 
-![Alt The Bayesian Network](img/bnet.png)
 
 
 
