@@ -50,18 +50,18 @@ _[bayesian inference](https://en.wikipedia.org/wiki/Bayesian_inference)_
 procedures, such as different fault-detection systems.
 
 Bayesian networks are data structures that map the relationship between
-events in terms of their probability.
-More specifically, a bayesian network is a **direct acyclic graph**
-where each _node_ corresponds to a random variable (either descrete or
-continus) and each _direct arc_ from node X to node Y means that X
-has a
+events in terms of their probability.  More specifically, a bayesian
+network is a **direct acyclic graph** where each _node_ corresponds to a
+random variable (either descrete or continus) and each _direct arc_ from
+node X to node Y means that X has a
 _[conditional dependency](https://en.wikipedia.org/wiki/Conditional_dependence)_
 on Y.  This conditional dependency is defined by a
 _[Conditional Probability Distribution](https://en.wikipedia.org/wiki/Conditional_probability_distribution)_
-(**CPD**) that, fore each node, quantifies the effect of the parents on the child node.
+(**CPD**) that, for each node, quantifies the effect of the parents on
+that node.
 
-In case the random variables are discrete, the _CPD_ can be represented
-as a
+In case the random variable is discrete, the _CPD_ can be represented as
+a
 _[Conditional Probability Table](https://en.wikipedia.org/wiki/Conditional_probability_table)_
 (**CPT**). The _CPT_ lists the probability that the child node takes on
 each of its different values for each combination of values of its
