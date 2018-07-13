@@ -54,7 +54,9 @@ The topology (structure) and the parameters of each CPD can be both
 learned from data.  However, since learning structure is much harder
 than learning parameters, we have designed the topology of the network
 according to our intuition and the method given in Chapter 14.2 ##
-Dependencies
+
+
+## Dependencies
 
 * MATLAB (https://www.mathworks.com/products/matlab.html)
 * The Bayes Net Toolbox (BNT) for MATLAB (https://github.com/bayesnet/bnt)
