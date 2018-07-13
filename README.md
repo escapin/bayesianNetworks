@@ -110,22 +110,26 @@ As the sensors in the room provide samples in various format and with a
 different timestamps, to collect data in a coherent way we have
 performed the following steps:
 
-1. We have defined a timeline `T` of timestamps based on when a new
+1. We have defined a timeline **T** of timestamps based on when a new
    sample is gathered by the _TemperatureDoor_ sensor. The sampling rate
    is 1 sample every 3 minutes. (We note that the choice of the specific
    sensor is completely arbitrary; it is important to fix an unique
    _timeline_ and then adapt the samples of the other sensors to it.)
 
-2. For each timestamp `t` in the timeline `T` defined at point 1., we
+2. For each timestamp `t` in the timeline **T** defined at point 1., we
     have extracted the samples of the _Humidity_ sensor, the
     _TemperatureWindow_ sensor and of the _Z-Plug_ energy consumption
     sensor whose timestamps are the closest to `t`.
 
-3. For each timestamp `t` in the timeline `T` defined at point 1., we
+3. For each timestamp `t` in the timeline **T** defined at point 1., we
    have set the value of _Movement_ and _WindowOpen_ sensors to 1 if, in
    the last 3 minutes, the corresponding sensor has been activated at
    least once.
    
 ### Accuracy of our Bayesian Network
 
+work in progress...
+
 ### Bayesian Inference: Fault-Detection
+
+work in progress...
