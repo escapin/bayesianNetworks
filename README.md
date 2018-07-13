@@ -20,16 +20,16 @@ The room is equipped with the following sensors:
 
 These sensors communicate with a central unit through (wireless) the
 ZigBee protocol and the data collected are saved in a SQLite
-database\footnote{\url{http://www.sqlite.org/}}.
+database.
 
 
 ## Dependencies
 
-	* MATLAB (https://www.mathworks.com/products/matlab.html)
-	* The Bayes Net Toolbox (BNT) for MATLAB (https://github.com/bayesnet/bnt)
-	* `mksqlite`, the MATLAB Mex-DLL to access SQLite databases (https://github.com/AndreasMartin72/mksqlite)
+* MATLAB (https://www.mathworks.com/products/matlab.html)
+* The Bayes Net Toolbox (BNT) for MATLAB (https://github.com/bayesnet/bnt)
+* `mksqlite`, the MATLAB Mex-DLL to access SQLite databases (https://github.com/AndreasMartin72/mksqlite)
 Optional:
-	* Mozila Firefox (https://www.mozilla.org/en-US/firefox/)
-	* The SQLite Manager Firefox Add-on (https://addons.mozilla.org/en-US/firefox/addon/sqlite-manager/)
+* Mozila Firefox (https://www.mozilla.org/en-US/firefox/)
+* The SQLite Manager Firefox Add-on (https://addons.mozilla.org/en-US/firefox/addon/sqlite-manager/)
 
 ## How to
