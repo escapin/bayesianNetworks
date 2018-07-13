@@ -16,7 +16,7 @@ water dispenser.
 Sofas are placed on the wall in the bottom and on the wall to the left,
 whereas coffee tables and chairs are present in the center of the room.
 
-<img src="img/room.png" width="200" alt="The environment">
+<img src="img/room.png" width="1000" alt="The environment">
 
 
 
