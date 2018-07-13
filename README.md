@@ -53,7 +53,8 @@ its different values for each combination of values of its parents.
 The topology (structure) and the parameters of each CPD can be both
 learned from data.  However, since learning structure is much harder
 than learning parameters, we have designed the topology of the network
-according to our intuition and the method given in Chapter 14.2 ##
+according to the method given in Chapter 14.2 of
+_[Artificial Intelligence: A Modern Approach](http://aima.cs.berkeley.edu/)_.
 
 
 ## Dependencies
