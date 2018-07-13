@@ -76,10 +76,10 @@ Number | Name | Modelled data
 3	| Window			| Window open or close (binary)
 4	| Z-Plug			| Energy consumption (Watt)
 5	| TemperatureDoor	| Temperature near the door (Celsius)
-6	| Humidity			| Room humidity (percent)
+6	| Humidity			| Relative humidity (percent)
 7	| TemperatureWindow	| Temperature near the window (Celsius)
 
-The picture below shows the structure of our Bayesian Network
+The picture below shows the structure of our bayesian network.
 
 ![Alt The Bayesian Network](img/bnet.png)
 
