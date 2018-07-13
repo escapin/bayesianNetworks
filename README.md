@@ -6,7 +6,7 @@ values in a environment.
 ### Dependencies
 
 * MATLAB (https://www.mathworks.com/products/matlab.html)
-* The Bayes Net Toolbox (BNT) for MATLAB (https://github.com/bayesnet/bnt)
+* The **Bayesian Network Toolbox (BNT)** for MATLAB (https://github.com/bayesnet/bnt)
 * `mksqlite`, the MATLAB Mex-DLL to access SQLite databases (https://github.com/AndreasMartin72/mksqlite)
 
 Optional:
@@ -66,8 +66,7 @@ _[Conditional Probability Table](https://en.wikipedia.org/wiki/Conditional_proba
 (**CPT**). The _CPT_ lists the probability that a node takes on each of
 its different values for each combination of values of its parents.
 
-
-### Learning
+### Our Bayesian Network
 
 The topology (structure) and the parameters of each CPD can be both
 learned from data.  However, since learning structure is much harder
@@ -85,9 +84,9 @@ room.
 
 Number | Name | Modelled data 
 ------ | ----  | -----------
-1	| MovementSensor	| Motion detection (_binary_)
+1	| Movement	| Motion detection (_binary_)
 2  | Presence (Hidden Node) | Presence inside the room  (_binary_)
-3	| Window			| Window open or close (_binary_)
+3	| WindowOpen			| Window open (_binary_)
 4	| Z-Plug			| Energy consumption (_Watt_)
 5	| TemperatureDoor	| Temperature near the door (_Celsius_)
 6	| Humidity			| Relative humidity (_percent_)
@@ -97,5 +96,36 @@ The picture below shows the structure of our bayesian network.
 <img src="img/bnet.png" width="600" alt="The Bayesian Network">
 
 
+### Data acquisition and Learning
 
-### How to
+In order to perform statistical inference on a bayesian network, it is necessary to
+perform a _learning phase_ based on the available data.
+
+The learning function of BNT Toolbox needs a _matrix_ with the samples
+of the collected data. Each row of the matrix represents a node, whereas
+each column a sample gathered from every sensor at a given point of
+time.
+
+As the sensors in the room provide samples in various format and with a
+different timestamps, to collect data in a coherent way we have
+performed the following steps:
+
+1. We have defined a timeline `T` of timestamps based on when a new
+   sample is gathered by the _TemperatureDoor_ sensor. The sampling rate
+   is 1 sample every 3 minutes. (We note that the choice of the specific
+   sensor is completely arbitrary; it is important to fix an unique
+   _timeline_ and then adapt the samples of the other sensors to it.)
+
+2. For each timestamp `t` in the timeline `T` defined at point 1., we
+    have extracted the samples of the _Humidity_ sensor, the
+    _TemperatureWindow_ sensor and of the _Z-Plug_ energy consumption
+    sensor whose timestamps are the closest to `t`.
+
+3. For each timestamp `t` in the timeline `T` defined at point 1., we
+   have set the value of _Movement_ and _WindowOpen_ sensors to 1 if, in
+   the last 3 minutes, the corresponding sensor has been activated at
+   least once.
+   
+### Accuracy of our Bayesian Network
+
+### Bayesian Inference: Fault-Detection
