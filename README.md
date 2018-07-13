@@ -3,7 +3,7 @@
 A machine learning approach for fault detection of enery consumption
 values in a environment.
 
-## Dependencies
+### Dependencies
 
 * MATLAB (https://www.mathworks.com/products/matlab.html)
 * The Bayes Net Toolbox (BNT) for MATLAB (https://github.com/bayesnet/bnt)
