@@ -28,7 +28,9 @@ database.
 * MATLAB (https://www.mathworks.com/products/matlab.html)
 * The Bayes Net Toolbox (BNT) for MATLAB (https://github.com/bayesnet/bnt)
 * `mksqlite`, the MATLAB Mex-DLL to access SQLite databases (https://github.com/AndreasMartin72/mksqlite)
+
 Optional:
+
 * Mozila Firefox (https://www.mozilla.org/en-US/firefox/)
 * The SQLite Manager Firefox Add-on (https://addons.mozilla.org/en-US/firefox/addon/sqlite-manager/)
 
