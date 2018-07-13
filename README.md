@@ -13,7 +13,7 @@ there are three electrical appliances: a microwave, a kettle, and a
 water dispenser.
 
 Sofas are placed on the sidewalls below and to the left, whereas 
-coffee tables are present in the center of the room.
+coffee tables and chairs are present in the center of the room.
 
 ![Alt The chill-out zone](img/room.png)
 
