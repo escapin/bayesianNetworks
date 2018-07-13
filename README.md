@@ -61,25 +61,27 @@ than learning parameters, we have designed the topology of the network
 according to the method given in Chapter 14.2 of the book
 _[Artificial Intelligence: A Modern Approach](http://aima.cs.berkeley.edu/)_.
 
-The aim of our bayesian network is to model the environment (the room) by the data
+The aim of our Bayesian Network is to model the environment (the room) by the data
 gathered from all the sensors.
 
-We define six observable nodes that model the output of each sensor and
-one hidden node that models the possible presence of a person inside the
+We define 6 _observable nodes_ that model the output of each sensor and
+1 _hidden node_ that models the possible presence of a person inside the
 room.
 
 
 Number | Name | Modelled data 
 ------ | ----  | -----------
-1	| MovementSensor	| Motion detection
-2  | Presence (Hidden) | Presence inside the room 
-
+1	| MovementSensor	| Motion detection (binary)
+2  | Presence (Hidden) | Presence inside the room  (binary)
+3	| Window			| Window open or close (binary)
+4	| Z-Plug			| Energy consumption (Watt)
+5	| TemperatureDoor	| Temperature near the door (Celsius)
+6	| Humidity			| Room humidity (percent)
+7	| TemperatureWindow	| Temperature near the window (Celsius)
 
 The picture below shows the structure of our Bayesian Network
 
-\begin{center}
-\includegraphics[width=\textwidth]{img/bnet}
-\end{center}
+![Alt The Bayesian Network](img/bnet.png)
 
 
 
