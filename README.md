@@ -63,9 +63,8 @@ that node.
 In case the random variable is discrete, the _CPD_ can be represented as
 a
 _[Conditional Probability Table](https://en.wikipedia.org/wiki/Conditional_probability_table)_
-(**CPT**). The _CPT_ lists the probability that the child node takes on
-each of its different values for each combination of values of its
-parents.
+(**CPT**). The _CPT_ lists the probability that a node takes on each of
+its different values for each combination of values of its parents.
 
 
 ### Learning
