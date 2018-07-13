@@ -15,7 +15,7 @@ water dispenser.
 
 Sofas are placed on the wall in the bottom and on the wall to the left,
 whereas coffee tables and chairs are present in the center of the room.
-<img src="img/room.png" width="750" alt="The environment">
+<img src="img/room.png" width="600" alt="The environment">
 
 The room is equipped with the following **sensors**:
 
@@ -78,7 +78,7 @@ Number | Name | Modelled data
 7	| TemperatureWindow	| Temperature near the window (_Celsius_)
 
 The picture below shows the structure of our bayesian network.
-<img src="img/bnet.png" width="500" alt="The Bayesian Network">
+<img src="img/bnet.png" width="600" alt="The Bayesian Network">
 
 
 
