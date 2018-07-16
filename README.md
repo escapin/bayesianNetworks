@@ -19,7 +19,8 @@ Download the `Bayesian Net Toolbox` and `mksqlite`:
  make
  ```
 
-Open MATLAB, navigate to this working folder, and run the following script:
+Open MATLAB, navigate to this working folder, and load these libraries
+by running:
 
 ```
 loadLibraries
