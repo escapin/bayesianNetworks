@@ -13,13 +13,13 @@ values in a environment.
 
 ### Development environment
 
-* Download the `Bayesian Net Toolbox` and `mksqlite`:
+Download the `Bayesian Net Toolbox` and `mksqlite`:
 
  ```
  make
  ```
 
-* Open MATLAB, navigate to this working folder, and run the following script:
+Open MATLAB, navigate to this working folder, and run the following script:
 
 ```
 loadLibraries
