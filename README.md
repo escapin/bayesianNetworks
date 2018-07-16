@@ -8,11 +8,8 @@ values in a environment.
 * MATLAB (https://www.mathworks.com/products/matlab.html)
 * The **Bayesian Network Toolbox (BNT)** for MATLAB (https://github.com/bayesnet/bnt)
 * `mksqlite`, the MATLAB Mex-DLL to access SQLite databases (https://github.com/AndreasMartin72/mksqlite)
+* Optional: a SQLite browser, e.g., https://sqlitebrowser.org/
 
-Optional:
-
-* Mozila Firefox (https://www.mozilla.org/en-US/firefox/)
-* The SQLite Manager Firefox Add-on (https://addons.mozilla.org/en-US/firefox/addon/sqlite-manager/)
 
 ## Description of the environment
 
@@ -118,7 +115,7 @@ performed the following steps:
 
 2. For each timestamp `t` in the timeline **T** defined at point 1., we
     have extracted the samples of the _Humidity_ sensor, the
-    _TemperatureWindow_ sensor and of the _Z-Plug_ energy consumption
+    _TemperatureWindow_ sensor, and of the _Z-Plug_ energy consumption
     sensor whose timestamps are the closest to `t`.
 
 3. For each timestamp `t` in the timeline **T** defined at point 1., we
