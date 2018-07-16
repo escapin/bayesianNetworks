@@ -5,8 +5,8 @@ function [ data ] = createDataBNet(database, startDate, endDate)
 %
 %   Parameter:
 %   -database : name of database
-%   -startDate : initial date
-%   -endDate:   final date
+%   -startDate : initial date (earliest date: '2012-06-26 00:00:00')
+%   -endDate:   final date (latest date: '2012-07-28 00:00:00')
 %   Return
 %     matrix of data
 
