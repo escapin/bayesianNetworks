@@ -1,6 +1,9 @@
 function [ res ] = deleteDuplicateSensor( data )
 %Delete duplicate of Time Value
-data = struct2cell(data);
+
+%data = struct2cell(data);
+data = rot90(data,3); % backward compatability with the older version
+
 lenght = size(data);
 
 i = 1;

@@ -4,7 +4,8 @@ function [ kettle, waterDisp, microwave ] = queryZplug(database, startDate, endD
 % 
 % Returns the query results of Zplug
 %
-mksqlite('open', database);
+%mksqlite('open', database);
+dbid=sqlite(fullfile(pwd, database));
 
 % Water Dispenser active: ~ [100W or 1300W or 1600W or 2600W]
 QwaterDisp =['SELECT Parameter_State.ID, Parameter_State.Value, Parameter_State.Time FROM Parameter_State ' ... 
@@ -33,9 +34,11 @@ QwaterDisp=sprintf(QwaterDisp, startDate, endDate);
 Qmicrowave=sprintf(Qmicrowave, startDate, endDate);
 Qkettle=sprintf(Qkettle, startDate, endDate);
 
-waterDisp = mksqlite(QwaterDisp);
-kettle = mksqlite(Qkettle);
-microwave = mksqlite(Qmicrowave);
+waterDisp = fetch(dbid,QwaterDisp);
+kettle = fetch(dbid,Qkettle);
+microwave = fetch(dbid,Qmicrowave);
+
+
 
 if isempty(waterDisp)
     waterDisp=cell(3,1);
@@ -43,7 +46,7 @@ if isempty(waterDisp)
     waterDisp(2,1)={-1};
     waterDisp(3,1)=cellstr(datestr([1900, 01, 01, 00, 00, 00]));
 else
-    waterDisp=struct2cell(waterDisp);
+    waterDisp=rot90(waterDisp,3);
 end
 if isempty(microwave)
     microwave=cell(3,1);
@@ -51,7 +54,7 @@ if isempty(microwave)
     microwave(2,1)={-1};
     microwave(3,1)=cellstr(datestr([1900, 01, 01, 00, 00, 00]));
 else
-    microwave=struct2cell(microwave);
+    microwave=rot90(microwave,3);
 end
 if isempty(kettle)
     kettle=cell(3,1);
@@ -59,8 +62,9 @@ if isempty(kettle)
     kettle(2,1)={-1};
     kettle(3,1)=cellstr(datestr([1900, 01, 01, 00, 00, 00]));
 else
-    kettle=struct2cell(kettle);
+    kettle=rot90(kettle,3);
 end
 
-mksqlite('close');
+%mksqlite('close');
+close(dbid);
 end

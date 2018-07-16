@@ -4,13 +4,14 @@ function [ table ] = syncWinMov(database, targetNode, startDate, endDate)
 %
 % INPUTS:
 %   - database: the string containging the database path
-%   - timeline: 1xN array containging some time instants
 %   - targetNode: the number of the FK_Parameter of the target parameter
 %   - startDate: the beginning date of the measurements
 %   - endDate: the ending date of the measurements
 
 % addpath(genpathKPM(pwd))
-mksqlite('open',database);
+
+%mksqlite('open',database);
+dbid=sqlite(fullfile(pwd, database));
 
 % 2 window sensor
 % 9 movement sensor
@@ -23,8 +24,11 @@ queryName = ['SELECT PS1.ID, PS1.Time AS sensorOn, PS2.Time AS sensorOff ' ...
              'PS3.Time BETWEEN Datetime(''%s'') AND Datetime(''%s'') AND PS3.Time > PS1.Time) ORDER BY PS1.Time'];
 
 queryName=sprintf(queryName, targetNode, targetNode, startDate, endDate, startDate, endDate, targetNode, startDate, endDate);
-table=mksqlite(queryName);
-mksqlite('close');
+
+%table=mksqlite(queryName);
+table=fetch(dbid, queryName);
+%mksqlite('close');
+close(dbid);
 
 if isempty(table)
     table=cell(3,1);
@@ -32,7 +36,7 @@ if isempty(table)
     table(2,1)=cellstr(datestr([1900, 01, 01, 00, 00, 00]));
     table(3,1)=cellstr(datestr([1900, 01, 01, 00, 00, 00]));
 else
-    table=struct2cell(table);
+    table=rot90(table,3); % backward compatability with the 2012 version
 end
 end
 

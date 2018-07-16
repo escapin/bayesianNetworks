@@ -2,7 +2,10 @@ function [ res ] = matchingZplugInterval(ZplugActive, timeline)
 %
 %    function res = matchingSensorInterval(sensActive, timeline)
 %
-% Per ogni intervallo temporale della timeline assegna 1 sse il sensore è attivo in quel determinato intervallo
+% For each timestamp 't_i' in the timeline, we set the value to 1 if, 
+% in the time interval [t_i,t_(i-1)], the Zplug has been 
+% activated at least once.
+%
 %
 % INPUTS:
 %   - ZplugActive: cell 1xN containging the active temporal instant of that appliance
