@@ -1,6 +1,6 @@
 function table = syncTempHum(database, referenceNode, targetNode, startDate, endDate)
 %
-%    function table = syncTempHum(database, referenceNode, targetNode, startDate, endDate)
+%    function table = syncTempSmth(database, referenceNode, targetNode, startDate, endDate)
 %
 % INPUTS:
 %   - database: the string containging the database path
@@ -10,7 +10,9 @@ function table = syncTempHum(database, referenceNode, targetNode, startDate, end
 %   - endDate: the ending date of the measurements
 
 % addpath(genpathKPM(pwd))
-mksqlite('open',database);
+
+%dbid=mksqlite('open',database);
+dbid=sqlite(fullfile(pwd, database));
 
 queryName = ['SELECT v.TempWin, v.PS1time, v.Hum, v.PS2time FROM ' ...
     '(SELECT PS1.Value as TempWin, PS2.Value as Hum, PS1.Time as PS1time, PS2.Time as PS2time, ' ...
@@ -27,7 +29,11 @@ queryName = ['SELECT v.TempWin, v.PS1time, v.Hum, v.PS2time FROM ' ...
 
 queryName=sprintf(queryName, referenceNode, targetNode, startDate, endDate, startDate, endDate, referenceNode, targetNode, startDate, endDate, startDate, endDate);
 
-table=mksqlite(queryName);
-mksqlite('close');
+
+%table=mksqlite(dbid, queryName);
+table=fetch(dbid, queryName);
+%mksqlite(dbid, 'close');
+close(dbid);
+
 end
 
