@@ -1,4 +1,4 @@
-% Add the mksqlite and bnt libraries to the working space
+% Script loading the libraries 'mksqlite' and 'bnt' to the workspace
 
 clear all
 
