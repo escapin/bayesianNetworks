@@ -3,10 +3,10 @@
 clear all
 
 % add the library to query the SQLite db
-addpath lib/mksqlite
+addpath(genpath('lib/mksqlite'));
 % add the libraries of the Bayesian Network Toolbox
 cd lib/bnt
-addpath(genpathKPM(pwd))
+addpath(genpathKPM(pwd));
 cd BNT
-addpath(genpathKPM(pwd))
+addpath(genpathKPM(pwd));
 cd ../../..
