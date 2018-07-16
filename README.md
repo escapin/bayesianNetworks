@@ -6,10 +6,10 @@ values in a environment.
 ### Dependencies
 
 * MATLAB (https://www.mathworks.com/products/matlab.html).
+* The Matworks database toolbox (https://www.mathworks.com/products/database.html)
 * The **Bayesian Network Toolbox (BNT)** for MATLAB (https://github.com/bayesnet/bnt).
-* `mksqlite`, the MATLAB Mex-DLL to access SQLite databases (https://github.com/AndreasMartin72/mksqlite).
 * `wget` and `unzip` for downloading the libraries above.
-* Optional: a SQLite browser, e.g., https://sqlitebrowser.org/.
+* Optional: a SQLite browser to browse the database, e.g., https://sqlitebrowser.org/.
 
 ### Development environment
 
@@ -137,7 +137,33 @@ performed the following steps:
    have set the value of _Movement_ and _WindowOpen_ sensors to 1 if, in
    the last 3 minutes, the corresponding sensor has been activated at
    least once.
-   
+
+#### How to
+
+In the MATLAB terminal run
+```
+dataAcquisition
+```
+Inside the script you can change the time period:
+
+* earliest date: '2012-06-26 00:00:00'
+* latest date: '2012-07-28 00:00:00'
+
+The script calls the function `acquisition/createDataBNet.m` that
+creates a matrix [8x(# of timestamps)] with the aligned values of all the
+8 sensors:
+
+Row | Sensor | Unit
+--- | -----  | ----
+1 | movement | binary
+2 | windowOpen | binary
+3 | KettleSwitchedOn | binary
+4 | WaterDispenserSwitchedOn | binary
+5 | MicrowaveSwitchedOn | binary
+6 | TemperatureWindow | Celsius
+7 | RelativeHumidity | percent
+8 | TemperatureDoor | Celsius
+
 ### Accuracy of our Bayesian Network
 
 work in progress...
