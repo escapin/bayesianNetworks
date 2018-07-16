@@ -8,7 +8,9 @@ values in a environment.
 * MATLAB (https://www.mathworks.com/products/matlab.html)
 * The **Bayesian Network Toolbox (BNT)** for MATLAB (https://github.com/bayesnet/bnt)
 * `mksqlite`, the MATLAB Mex-DLL to access SQLite databases (https://github.com/AndreasMartin72/mksqlite)
+* `wget` and `unzip` for downloading the libraries above
 * Optional: a SQLite browser, e.g., https://sqlitebrowser.org/
+
 
 
 ## Description of the environment
