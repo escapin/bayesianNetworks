@@ -19,7 +19,7 @@ values in a environment.
  make
  ```
 
-* Open MATLAB, navigate to this folder and run the script:
+* Open MATLAB, navigate to this working folder, and run the following script:
 
 ```
 loadLibraries
