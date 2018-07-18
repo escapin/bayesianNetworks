@@ -45,5 +45,4 @@ data(6,:) = tempWindHum(1,:);
 data(7,:) = tempWindHum(3,:);
 data(8,:) = tempWindTempDoor(3,:);
 
-save('dataBNet.mat');
 end
