@@ -149,7 +149,7 @@ Inside the script you can change the time period:
 * latest date: '2012-07-28 00:00:00'
 
 The script calls the function `acquisition/createDataBNet.m` that
-creates a matrix [8x(# of timestamps)] with the aligned values of all the
+creates a matrix [8 x #samples] with the aligned values of all the
 8 sensors:
 
 Row | Sensor | Unit
