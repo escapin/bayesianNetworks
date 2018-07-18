@@ -8,12 +8,11 @@ values in a environment.
 * MATLAB (https://www.mathworks.com/products/matlab.html).
 * The Matworks database toolbox (https://www.mathworks.com/products/database.html)
 * The **Bayesian Network Toolbox (BNT)** for MATLAB (https://github.com/bayesnet/bnt).
-* `wget` and `unzip` for downloading the libraries above.
 * Optional: a SQLite browser to browse the database, e.g., https://sqlitebrowser.org/.
 
 ### Development environment
 
-Download the `Bayesian Net Toolbox` and `mksqlite`:
+Download the `Bayesian Net Toolbox`:
 
  ```
  make
