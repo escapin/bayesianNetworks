@@ -1,6 +1,5 @@
-% Script loading the libraries 'mksqlite' and 'bnt' to the workspace
+% Script loading the 'bnt' library to the workspace
 
-clear all
 
 % add the library to query the SQLite db
 addpath(genpath('lib/mksqlite'));

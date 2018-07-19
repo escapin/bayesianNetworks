@@ -1,6 +1,6 @@
-function dataZplug = createDataZplug
+function dataZplug = createBnetZplug(data, maxZplug)
 
-load('matrices/dataBNet_12_06_26__12_07_28.mat', 'data', 'maxZplug');
+%load('../data/dataBNet_12_06_26__12_07_28.mat', 'data', 'maxZplug');
 
 % movement
 dataZplug(1,:)=data(1,:);
@@ -12,3 +12,5 @@ dataZplug(3,:)=data(2,:);
 dataZplug(4,:)=maxZplug;
 % temp - hum
 dataZplug(5:7,:)=data(6:8,:);
+
+end
