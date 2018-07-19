@@ -18,7 +18,7 @@ disp('--------------------------------------------------------------------------
 disp("[11/10] Extracting data from the 'Zplug' sensor.");
 zPlug = unionZplug(database, startDate, endDate);
 
-disp("[12/10] Calculating the minumum, the maximum, and the average of the Zplug consumption.");
+disp("[12/10] Calculating the minumum, the maximum, and the average of Zplug consumption.");
 [ minZplug, maxZplug, avgZplug ] = matchingZplugWattInterval(zPlug, timeline);
 
 disp('------------------------------------------------------------------------------------');
