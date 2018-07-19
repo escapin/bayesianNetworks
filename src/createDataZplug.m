@@ -1,6 +1,6 @@
 function dataZplug = createDataZplug
 
-load('dataBNet_12_06_26__12_07_28.mat', 'data', 'maxZplug');
+load('matrices/dataBNet_12_06_26__12_07_28.mat', 'data', 'maxZplug');
 
 % movement
 dataZplug(1,:)=data(1,:);

@@ -15,4 +15,4 @@ zPlug = unionZplug(database, startDate, endDate);
 %operation = @(x) max(x);
 
 
-%[ minZplug, maxZplug, avgZplug ] = matchingZplugWattInterval(zPlug, timeline);
+[ minZplug, maxZplug, avgZplug ] = matchingZplugWattInterval(zPlug, timeline);
