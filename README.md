@@ -165,9 +165,6 @@ Row | Sensor | Unit
 
 All the data is saved in the MATLAB formatted data file `bNet_data.mat`.
 
-### Accuracy of our Bayesian Network
-
-work in progress...
 
 ### Bayesian Inference: Fault-Detection
 
