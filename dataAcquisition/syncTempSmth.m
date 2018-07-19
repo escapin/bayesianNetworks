@@ -36,8 +36,8 @@ table=fetch(dbid, queryName);
 close(dbid);
 
 table=transpose(table); 
-% the transpose of the (m×n) matrix A is the (n×m) matrix B such that 
-%B_(i, j) = A_(j, i): for backward compatability with the 2012 version
+% the transpose of the (mXn) matrix A is the (n×m) matrix B such that
+%B_(i, j) = A_(j, i). (For backward compatability with the 2012 version.)
 
 end
 

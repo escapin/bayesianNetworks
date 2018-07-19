@@ -47,7 +47,7 @@ if isempty(table)
     table(3,1)=cellstr(datestr([1900, 01, 01, 00, 00, 00]));
 else
     table=transpose(table); 
-    % the transpose of the (m×n) matrix A is the (n×m) matrix B such that 
+    % the transpose of the (mXn) matrix A is the (nXm) matrix B such that
     %B_(i, j) = A_(j, i): for backward compatability with the 2012 version
 end
 end

@@ -59,7 +59,7 @@ if isempty(microwave)
     microwave(3,1)=cellstr(datestr([1900, 01, 01, 00, 00, 00]));
 else
     microwave=transpose(microwave);
-    % the transpose of the (m×n) matrix A is the (n×m) matrix B such that 
+    % the transpose of the (mXn) matrix A is the (nXm) matrix B such that
     % B_(i, j) = A_(j, i): for backward compatability with the 2012 version
 end
 if isempty(kettle)
@@ -69,7 +69,7 @@ if isempty(kettle)
     kettle(3,1)=cellstr(datestr([1900, 01, 01, 00, 00, 00]));
 else
     kettle=transpose(kettle);
-    % the transpose of the (m×n) matrix A is the (n×m) matrix B such that 
+    % the transpose of the (mXn) matrix A is the (nXm) matrix B such that
     % B_(i, j) = A_(j, i): for backward compatability with the 2012 version
 end
 
