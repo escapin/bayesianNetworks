@@ -139,9 +139,9 @@ performed the following steps:
 
 #### How to
 
-In the MATLAB terminal run
+In the MATLAB terminal, run
 ```
-dataAcquisition
+computeBnet
 ```
 Inside the script you can change the time period:
 
