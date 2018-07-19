@@ -3,10 +3,10 @@ close all
 
 database ='database/until12_07_26.sqlite';
 startDate = '2012-06-26 00:00:00';
-endDate = '2012-06-28 00:00:00';
+endDate = '2012-07-15 00:00:00';
 
 
-addpath(genpath('dataAcquisition'));
+addpath(genpath('src/dataAcquisition'));
 
 fprintf("Extracting and computing the Bayesian Network with data from <strong>%s</strong> to <strong>%s</strong>.\n", startDate, endDate);
 [bNet, timeline] = computeBnet(database, startDate, endDate);
