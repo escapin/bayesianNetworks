@@ -1,6 +1,6 @@
-function [ minZplug maxZplug avgZplug ] = matchingZplugWattInterval(ZplugActive, timeline, operation)
+function [ minZplug, maxZplug, avgZplug ] = matchingZplugWattInterval(ZplugActive, timeline)
 %
-%    function [ minZplug maxZplug avgZplug ] = matchingSensorInterval(sensActive, timeline)
+%    function [ minZplug, maxZplug, avgZplug ] = matchingSensorInterval(sensActive, timeline)
 %
 % For each timestamp 't_i' in the timeline, we set the value to 1 if, 
 % in the time interval [t_i,t_(i-1)], the Zplug has been 
@@ -12,7 +12,6 @@ function [ minZplug maxZplug avgZplug ] = matchingZplugWattInterval(ZplugActive,
 %               1,j Watt value
 %               2,j relevation instant
 %   - timeline: 1xN array of timestamps
-%   - operation: which operation made ok every batch
 % OUTPUT:
 %   - res: 1xN cell where res(i)=1 iff sensor is active in i-th temporal interval, 0 otherwise.
 
@@ -36,11 +35,19 @@ for i=1:lenghtTimeline(2)
         instant=datenum(ZplugActive(2,j));
         if(instant < startTimeline) % to avoid to check the previous intervals
             nextJ = j+1;
+%             disp('instant'); ZplugActive(2,j)
+%             if (i>1) 
+%                 disp('startTimeline'); timeline(1,i-1) 
+%             end
+%             disp("instant < startTimeline");
+%             disp('--------------');
+             
         elseif (endTimeline < instant) % to avoid to check the next intervals
             endInnerLoop=1;
-            %disp('endTimeline'); timeline(1,i)
-            %disp('instant'); ZplugActive(2,j)
-            %disp('--------------');
+%             disp('endTimeline'); timeline(1,i)
+%             disp('instant'); ZplugActive(2,j)
+%             disp("endTimeline < instant");
+%             disp('--------------');
         else
 %             i
 %             j

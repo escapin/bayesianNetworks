@@ -13,9 +13,11 @@ queryZplug=sprintf(queryZplug, startDate, endDate);
 
 %zPlug = mksqlite(queryZplug);
 zPlug =  fetch(dbid, queryZplug);
-
-zPlug = rot90(zPlug);% for backward compatability
-zPlug = flipud(zPlug);
-
 % mksqlite('close');
 close(dbid);
+
+zPlug = transpose(zPlug);
+% the transpose of the (mxn) matrix A is the (nxm) matrix B such that
+% B_(i, j) = A_(j, i). (For backward compatability with the 2012 version.)
+
+end
