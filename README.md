@@ -156,9 +156,9 @@ Row | Sensor | Unit
 --- | -----  | ----
 1 | movement | binary
 2 | windowOpen | binary
-3 | KettleSwitchedOn | binary
-4 | WaterDispenserSwitchedOn | binary
-5 | MicrowaveSwitchedOn | binary
+3 | KettleOn | binary
+4 | WaterDispenserOn | binary
+5 | MicrowaveOn | binary
 6 | TemperatureWindow | Celsius
 7 | RelativeHumidity | percent
 8 | TemperatureDoor | Celsius
