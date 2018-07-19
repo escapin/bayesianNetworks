@@ -12,15 +12,15 @@ function [ res ] = matchingSensorInterval(sensActive, timeline)
 % OUTPUT:
 %   - res: 1xN cell where res(i)=1 iff sensor is active in i-th temporal interval, 0 otherwise.
 
-lenght = size(timeline);
+lenghtTimeline = size(timeline);
 lenghtTable=size(sensActive);
-res = zeros(1,lenght(2));
+res = zeros(1,lenghtTimeline(2));
 
 % to set up the first interval
 startTimeline=addtodate(datenum(timeline(1,1)), -3, 'minute');
 endTimeline=datenum(timeline(1,1));
 nextJ=1;
-for i=1:lenght(2)
+for i=1:lenghtTimeline(2)
     endInnerLoop=0;
     j=nextJ; % to avoid to check the previous intervals
     while(j<=lenghtTable(2) && endInnerLoop==0)
@@ -38,7 +38,7 @@ for i=1:lenght(2)
     end
     
     startTimeline=datenum(timeline(1,i));
-    if(i~=lenght(2)) % to avoid Out Of Bound Error
+    if(i~=lenghtTimeline(2)) % to avoid Out Of Bound Error
         endTimeline=datenum(timeline(1,i+1));
     end
 end

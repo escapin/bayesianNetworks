@@ -35,5 +35,9 @@ table=fetch(dbid, queryName);
 %mksqlite('close');
 close(dbid);
 
+table=transpose(table); 
+% the transpose of the (m×n) matrix A is the (n×m) matrix B such that 
+%B_(i, j) = A_(j, i): for backward compatability with the 2012 version
+
 end
 

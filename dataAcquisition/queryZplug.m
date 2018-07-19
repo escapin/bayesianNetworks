@@ -38,6 +38,8 @@ waterDisp = fetch(dbid,QwaterDisp);
 kettle = fetch(dbid,Qkettle);
 microwave = fetch(dbid,Qmicrowave);
 
+%mksqlite('close');
+close(dbid);
 
 
 if isempty(waterDisp)
@@ -46,7 +48,9 @@ if isempty(waterDisp)
     waterDisp(2,1)={-1};
     waterDisp(3,1)=cellstr(datestr([1900, 01, 01, 00, 00, 00]));
 else
-    waterDisp=rot90(waterDisp,3);
+    waterDisp=transpose(waterDisp); 
+    % the transpose of the (m×n) matrix A is the (n×m) matrix B such that 
+    % B_(i, j) = A_(j, i): for backward compatability with the 2012 version
 end
 if isempty(microwave)
     microwave=cell(3,1);
@@ -54,7 +58,9 @@ if isempty(microwave)
     microwave(2,1)={-1};
     microwave(3,1)=cellstr(datestr([1900, 01, 01, 00, 00, 00]));
 else
-    microwave=rot90(microwave,3);
+    microwave=transpose(microwave);
+    % the transpose of the (m×n) matrix A is the (n×m) matrix B such that 
+    % B_(i, j) = A_(j, i): for backward compatability with the 2012 version
 end
 if isempty(kettle)
     kettle=cell(3,1);
@@ -62,9 +68,9 @@ if isempty(kettle)
     kettle(2,1)={-1};
     kettle(3,1)=cellstr(datestr([1900, 01, 01, 00, 00, 00]));
 else
-    kettle=rot90(kettle,3);
+    kettle=transpose(kettle);
+    % the transpose of the (m×n) matrix A is the (n×m) matrix B such that 
+    % B_(i, j) = A_(j, i): for backward compatability with the 2012 version
 end
 
-%mksqlite('close');
-close(dbid);
 end
