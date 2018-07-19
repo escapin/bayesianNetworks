@@ -1,4 +1,4 @@
-function [ data ] = createDataBNet(database, startDate, endDate)
+function [ Bnet, timeline] = computeBnet(database, startDate, endDate)
 
 %  The function queries the database for collected
 %  temperature,humidity,window,movement data
@@ -7,8 +7,9 @@ function [ data ] = createDataBNet(database, startDate, endDate)
 %   -database : name of database (database in 'database/until12_07_26.sqlite')
 %   -startDate : initial date (earliest date: '2012-06-26 00:00:00')
 %   -endDate:   final date (latest date: '2012-07-28 00:00:00')
-%   Return
-%     matrix of data
+%   Return:
+%   -  [8x#samples] matrix representing the Bayesian Network
+%   -  timeline: the timeline of timestamps
 
 %database ='database/until12_07_26.sqlite';
 %startDate = '2012-06-26 00:00:00';
@@ -43,19 +44,23 @@ tempWindTempDoor = deleteDuplicateSensor(tempWindTempDoor);
 disp('------------------------------------------------------------------------------------');
 % MATCHING DATA
 disp("[ 6/10] Matching data: when 'Movement' sensor is On.");
-data(1,:) = matchingSensorInterval(movement, timeline);
+Bnet(1,:) = matchingSensorInterval(movement, timeline);
 disp("[ 7/10] Matching data: when 'WindowOpen' sensor is On.");
-data(2,:) = matchingSensorInterval(windowOpen, timeline);
+Bnet(2,:) = matchingSensorInterval(windowOpen, timeline);
 disp("[ 8/10] Matching Data: when 'Kettle' is On.");
-data(3,:) = matchingZplugInterval(kettle(3,:), timeline);
+Bnet(3,:) = matchingZplugInterval(kettle(3,:), timeline);
 disp("[ 9/10] Matching Data: when 'WaterDispenser' is On.");
-data(4,:) = matchingZplugInterval(waterDisp(3,:), timeline);
+Bnet(4,:) = matchingZplugInterval(waterDisp(3,:), timeline);
 disp("[10/10] Matching Data: when 'Microwave' is On.");
-data(5,:) = matchingZplugInterval(microwave(3,:), timeline);
+Bnet(5,:) = matchingZplugInterval(microwave(3,:), timeline);
  
-data(6,:) = tempWindHum(1,:);
-data(7,:) = tempWindHum(3,:);
-data(8,:) = tempWindTempDoor(3,:);
+Bnet(6,:) = tempWindHum(1,:);
+Bnet(7,:) = tempWindHum(3,:);
+Bnet(8,:) = tempWindTempDoor(3,:);
 disp('------------------------------------------------------------------------------------');
 
+fprintf("Saving all the variables in '<strong>bNet_data.mat</strong>'...");
+save('bNet_data.mat');
+fprintf("Done!\n");
+disp('------------------------------------------------------------------------------------');
 end

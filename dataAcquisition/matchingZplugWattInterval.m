@@ -39,7 +39,7 @@ for i=1:lenghtTimeline(2)
 %             if (i>1) 
 %                 disp('startTimeline'); timeline(1,i-1) 
 %             end
-%             disp("instant < startTimeline");
+%            disp("instant < startTimeline");
 %             disp('--------------');
              
         elseif (endTimeline < instant) % to avoid to check the next intervals
@@ -65,7 +65,6 @@ for i=1:lenghtTimeline(2)
         minZplug(i)=min(batch(1:k-1));
         maxZplug(i)=max(batch(1:k-1));
         avgZplug(i)=mean(batch(1:k-1));
-        
     else
         minZplug(i)=1;
         maxZplug(i)=1;
