@@ -169,4 +169,8 @@ All the data is saved in the MATLAB formatted data file `bNet_data.mat`.
 
 ### Bayesian Inference: Fault-Detection
 
-work in progress...
+In the MATLAB terminal, run 
+```
+fullJoinDistribution
+```
+
