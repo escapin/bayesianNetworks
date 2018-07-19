@@ -1,4 +1,4 @@
-% Data acquisition
+% Compute dataBnet
 
 addpath(genpath('computeBnet'));
 fprintf("<strong>Extracting, synchronizing, and matching the data from the database...</strong>\n");
