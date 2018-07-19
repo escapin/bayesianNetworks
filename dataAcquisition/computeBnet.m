@@ -1,4 +1,4 @@
-function [ Bnet, timeline] = computeBnet(database, startDate, endDate)
+function [ bNet, timeline] = computeBnet(database, startDate, endDate)
 
 %  The function queries the database for collected
 %  temperature,humidity,window,movement data
@@ -44,23 +44,23 @@ tempWindTempDoor = deleteDuplicateSensor(tempWindTempDoor);
 disp('------------------------------------------------------------------------------------');
 % MATCHING DATA
 disp("[ 6/10] Matching data: when 'Movement' sensor is On.");
-Bnet(1,:) = matchingSensorInterval(movement, timeline);
+bNet(1,:) = matchingSensorInterval(movement, timeline);
 disp("[ 7/10] Matching data: when 'WindowOpen' sensor is On.");
-Bnet(2,:) = matchingSensorInterval(windowOpen, timeline);
+bNet(2,:) = matchingSensorInterval(windowOpen, timeline);
 disp("[ 8/10] Matching Data: when 'Kettle' is On.");
-Bnet(3,:) = matchingZplugInterval(kettle(3,:), timeline);
+bNet(3,:) = matchingZplugInterval(kettle(3,:), timeline);
 disp("[ 9/10] Matching Data: when 'WaterDispenser' is On.");
-Bnet(4,:) = matchingZplugInterval(waterDisp(3,:), timeline);
+bNet(4,:) = matchingZplugInterval(waterDisp(3,:), timeline);
 disp("[10/10] Matching Data: when 'Microwave' is On.");
-Bnet(5,:) = matchingZplugInterval(microwave(3,:), timeline);
+bNet(5,:) = matchingZplugInterval(microwave(3,:), timeline);
  
-Bnet(6,:) = tempWindHum(1,:);
-Bnet(7,:) = tempWindHum(3,:);
-Bnet(8,:) = tempWindTempDoor(3,:);
+bNet(6,:) = tempWindHum(1,:);
+bNet(7,:) = tempWindHum(3,:);
+bNet(8,:) = tempWindTempDoor(3,:);
 disp('------------------------------------------------------------------------------------');
-
+disp('Bayesian Network created!');
 fprintf("Saving all the variables in '<strong>bNet_data.mat</strong>'...");
 save('bNet_data.mat');
-fprintf("Done!\n");
+fprintf("done!\n");
 disp('------------------------------------------------------------------------------------');
 end
