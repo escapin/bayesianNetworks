@@ -150,7 +150,8 @@ Inside the script you can change the time period:
 
 In particular, the script calls the function
 `dataAcquisition/computeBnet.m` that creates a matrix [8 x #samples]
-with the aligned values of all the 8 sensors:
+representing the Bayesian Network. Each row contains the values of a
+node over time:
 
 Row | Sensor | Unit
 --- | -----  | ----
