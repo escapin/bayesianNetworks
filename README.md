@@ -22,7 +22,7 @@ Open MATLAB, navigate to this working folder, and load these libraries
 by running:
 
 ```
-loadLibraries
+loadBNTlibrary
 ```
 
 ## Description of the environment
