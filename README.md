@@ -154,7 +154,7 @@ creates a matrix [8 x #samples] with the aligned values of all the
 
 Row | Sensor | Unit
 --- | -----  | ----
-1 | movement | binary
+1 | movementDetected | binary
 2 | windowOpen | binary
 3 | KettleOn | binary
 4 | WaterDispenserOn | binary
