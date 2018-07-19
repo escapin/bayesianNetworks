@@ -16,13 +16,13 @@ function [ data ] = createDataBNet(database, startDate, endDate)
 
 disp('------------------------------------------------------------------------------------');
 % EXTRACTING DATA
-disp("[ 1/10] Extracting Data from 'WindowsOpen' sensor: when the window is open.");
+disp("[ 1/10] Extracting data from the 'WindowsOpen' sensor: when the window is open.");
 windowOpen = extractWhenSensorOn(database, 2, startDate, endDate);
   
-disp("[ 2/10] Extracting Data from 'Movement' sensor: when movement is detected.");
+disp("[ 2/10] Extracting data from the 'Movement' sensor: when a movement is detected.");
 movement = extractWhenSensorOn(database, 9, startDate, endDate);
 
-disp("[ 3/10] Extracting Data from 'Z-Plug' sensor: when Kettle, WaterDispenser, Microwave are On.");
+disp("[ 3/10] Extracting data from the 'Z-Plug' sensor: when the kettle, the water dispenser, and the microwave are On.");
 [ kettle, waterDisp, microwave ] = queryZplug(database, startDate, endDate);
 
 disp('------------------------------------------------------------------------------------');
