@@ -3,11 +3,18 @@
 clear all
 close all
 
-load('dataBNet_12_06_26__12_07_28.mat', 'timeline');
+addpath(genpath('src/fullJoinDistribution'));
+
+% load('data/dataBNet_12_06_26__12_07_28.mat', 'timeline','bNet', 'maxZplug');
+load('bNet_data.mat', 'timeline','bNet', 'maxZplug');
+
+%disp('LEARNING PHASE');
+fprintf('Computing the <strong>Conditional Probability tables (CPT)</strong> for each node...\n');
+disp('------------------------------------------------------------------------------------');
 
 startI=1;
 endI=size(timeline,2);
-startFault=6001;
+startFault=2001;
 % 1 to 2000: learnng data to compute CPT
 % 2001 to 4000: data fault to test our bnet
  
@@ -15,11 +22,12 @@ faultValue=1000;
 %115: value with more prob after 2
 
 % Load data and formatted according to the Bayesian network
-dataZplug = createDataZplug; 
-% Create data fault
-[dataFault, indexMat] = createDataFault(dataZplug(:,startI:endI), startFault, faultValue, 'complete');
+bNetZplug = createBnetZplug(bNet, maxZplug); 
+% Fault injection
+%disp('Fault injection...');
+[dataFault, indexMat] = createDataFault(bNetZplug(:,startI:endI), startFault, faultValue, 'complete');
 
-% discretizza i dati
+% numerical discretization of the data
 [dataLearning, minmaxVector] = prepareDataLearning(dataFault);
 
 % learning on pure data
@@ -30,7 +38,9 @@ bnetCPT = calculateCPT(dataLearning(:,1:startFault-1),minmaxVector);
  
 %load('CPT_hiddenZplug.mat', 'bnetCPT');
 
-disp('Computing joint distribution...');
+disp('------------------------------------------------------------------------------------');
+%disp('INFERENCE PHASE');
+fprintf('Computing the <strong>full joint distribution</strong>...\n');
 
 [jointDistr, localCondDistr] = computeJointDistr(bnetCPT, dataLearning(:,startFault:endI));
 
@@ -67,12 +77,12 @@ for i=1:size(indexMatRel,2)
     end
     
 end
-% leg=legend({'correct data', 'detection with faults', 'detection without faults'});
-% legtxt=findobj(leg,'type','line');
-% 
-% set(legtxt(5),'color','b');
-% set(legtxt(3),'color','r');
-% set(legtxt(1),'color','g');
+%leg=legend({'correct data', 'detection with faults', 'detection without faults'});
+%legtxt=findobj(leg,'type','line');
+ 
+%set(legtxt(5),'color','b');
+%set(legtxt(3),'color','r');
+%set(legtxt(1),'color','g');
 
 set(gca,'XTick',xData)
 datetick('x','dd-mmm','keeplimits')
