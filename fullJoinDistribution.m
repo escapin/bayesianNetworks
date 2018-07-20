@@ -5,8 +5,8 @@ close all
 
 addpath(genpath('src/fullJoinDistribution'));
 
-% load('data/dataBNet_12_06_26__12_07_28.mat', 'timeline','bNet', 'maxZplug');
-load('bNet_data.mat', 'timeline','bNet', 'maxZplug');
+% load('data/dataBNet_12.06.26_12.07.28.mat', 'timeline','bNet', 'maxZplug');
+load('dataBNet.mat', 'timeline','bNet', 'maxZplug');
 
 %disp('LEARNING PHASE');
 fprintf('Computing the <strong>Conditional Probability tables (CPT)</strong> for each node...\n');
@@ -31,7 +31,7 @@ bNetZplug = createBnetZplug(bNet, maxZplug);
 [dataLearning, minmaxVector] = prepareDataLearning(dataFault);
 
 % learning on pure data
-bnetCPT = calculateCPT(dataLearning(:,1:startFault-1),minmaxVector);
+bnetCPT = computeCPT(dataLearning(:,1:startFault-1),minmaxVector);
 
 
 %save 'CPT_hiddenZplug.mat'
@@ -46,7 +46,7 @@ fprintf('Computing the <strong>full joint distribution</strong>...\n');
 
 
 
-save 'CPT_jointDistr.mat'
+save('data/CPT_jointDistr.mat')
 
 % Instead of calulating all the data, you can directly load this mat file!
 %load 'CPT_jointDistr.mat'

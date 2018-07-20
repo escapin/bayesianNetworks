@@ -23,9 +23,9 @@ disp("[12/10] Calculating the minumum, the maximum, and the average of Zplug con
 
 disp('------------------------------------------------------------------------------------');
 
-fprintf("Appending all these variable to '<strong>bNet_data.mat</strong>'...");
-save('bNet_data.mat','zPlug', 'minZplug', 'maxZplug', 'avgZplug', '-append');
+fprintf("Appending all these variable to '<strong>dataBNet.mat</strong>'...");
+save('dataBNet.mat','zPlug', 'minZplug', 'maxZplug', 'avgZplug', '-append');
 fprintf("done!\n");
 
 clear all
-load('bNet_data.mat');
+load('dataBNet.mat');

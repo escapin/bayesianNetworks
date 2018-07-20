@@ -2,7 +2,7 @@ function [data, minmaxVector] = prepareDataLearning(data)
 
 
 movement=1;
-precence=2; % hidden
+presence=2; % hidden
 window=3;
 zPlug=4;
 tempWin=5;
