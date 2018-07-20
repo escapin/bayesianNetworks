@@ -3,7 +3,7 @@
 clear all
 close all
 
-addpath(genpath('src/fullJoinDistribution'));
+addpath(genpath('src/fullJointDistribution'));
 
 % load('data/dataBNet_12.06.26_12.07.28.mat', 'timeline','bNet', 'maxZplug');
 load('dataBNet.mat', 'timeline','bNet', 'maxZplug');
