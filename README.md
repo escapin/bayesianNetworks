@@ -25,7 +25,7 @@ by running:
 loadBNTlibrary
 ```
 
-### Usage
+### Usage
 
 To generate the Bayesian Network(s)
 ```
