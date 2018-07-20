@@ -1,16 +1,16 @@
-function dataZplug = createBnetZplug(data, maxZplug)
+function dataZplug = createBnetZplug(bNet, maxZplug)
 
 %load('../data/dataBNet_12_06_26__12_07_28.mat', 'data', 'maxZplug');
 
 % movement
-dataZplug(1,:)=data(1,:);
+dataZplug(1,:)=bNet(1,:);
 % presence
-dataZplug(2,:)=cell(1,size(data,2));
-% window
-dataZplug(3,:)=data(2,:);
-% zPlug
+dataZplug(2,:)=cell(1,size(bNet,2));
+% windowOpen sensor
+dataZplug(3,:)=bNet(2,:);
+% zPlug sensor
 dataZplug(4,:)=maxZplug;
-% temp - hum
-dataZplug(5:7,:)=data(6:8,:);
+% temperatureWindow - relativeHumidity level - temeratureDoor
+dataZplug(5:7,:)=bNet(6:8,:);
 
 end

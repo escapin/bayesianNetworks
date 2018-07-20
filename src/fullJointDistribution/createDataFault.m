@@ -6,12 +6,12 @@ function [dataFault, indexMat] = createDataFault(dataZplug, startFault, faultVal
 %	-dataZplug	: data from Z-Plug sensor
 %	-startFalut	: index of start fault
 %	-faultValue	: watt value of fault
-%	-type		: -complete :  	insert in all interval
-%			  -random:     	insert in a random interval
-%			  -one:		one for interaval
+%	-type       : "complete" :  insert in all interval
+%                 "random":     insert in a random interval
+%                 "one":		one for interaval
 
 
-assert(startFault > 0 && startFault <= size(dataZplug,2), 'startFalut must be betwenn 1 and size(dataZplug,2)');
+assert(startFault > 0 && startFault <= size(dataZplug,2), 'startFault must be betwenn 1 and size(dataZplug,2)');
 
 range=startFault:size(dataZplug,2);
 

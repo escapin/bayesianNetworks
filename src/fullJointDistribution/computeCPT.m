@@ -1,11 +1,12 @@
 function bnetCPT = calculateCPT(dataLearning, minmaxVector)
 
 %% Calculate the CPT for Bayesian Network
-%  Parameter:
+%  Parameters:
 %   datalearning: matrix of data for learn_params_em
-%   minmaxVector: array that contains the minumum and the maxium values for TemperatureDoor TemperatureWindow and Humidity
+%   minmaxVector: array that contains the minumum and the maxium values for 
+%                 TemperatureWindow, TemperatureDoor, and Humidity sensors
 %  Return:
-%   Bayesian Network with popolated CPT
+%   Bayesian Network with populated CPT
 %
 
 N = 7;
@@ -67,7 +68,7 @@ bnetHid.CPD{tempDoor} = tabular_CPD(bnetHid, tempDoor, 'prior_type', 'dirichlet'
 
 
 
-%% Learn Phase
+%% Learning Phase
 disp('Executing Learn Params EM...');
 
 
@@ -77,7 +78,7 @@ max_iter=10;
 [bnetCPT, LLtrace, engineHid] = learn_params_em(engine, dataLearning, max_iter);
 
 %% View Data
-%To view the learned parameters, we use a little Matlab hackery.
+% To view the learned parameters, we use a little Matlab hackery.
 CPT = cell(1,N);
 for i=1:N
   s=struct(bnetCPT.CPD{i});  % violate object privacy
