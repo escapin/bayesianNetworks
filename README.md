@@ -25,6 +25,24 @@ by running:
 loadBNTlibrary
 ```
 
+### Usage
+To generate the Bayesian Network(s)
+```
+dataAcquisition
+```
+
+To compute the Conditional Probability Tables (CPTs) of each node of the Bayesian Network
+```
+calculateCPT
+```
+
+To compute the Full Joint Distribution of the Bayesian Network
+```
+fullJointDistribution
+```
+
+
+
 ## Description of the environment
 
 The environment consists in a room of about 20 square meters and it is
@@ -169,8 +187,13 @@ All the data is saved in the MATLAB formatted data file `bNet_data.mat`.
 
 ### Bayesian Inference: Fault-Detection
 
-In the MATLAB terminal, run 
+To compute the Conditional Probability Tables (CPTs) of each node of the Bayesian Network
 ```
-fullJoinDistribution
+calculateCPT
+```
+
+To compute the Full Joint Distribution of the Bayesian Network
+```
+fullJointDistribution
 ```
 
