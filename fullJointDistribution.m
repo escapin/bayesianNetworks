@@ -6,7 +6,7 @@ close all
 addpath(genpath('src/fullJointDistribution'));
 
 % load('data/dataBNet_12.06.26_12.07.28.mat', 'timeline','bNet', 'maxZplug');
-load('dataBNet.mat', 'timeline','bNet', 'maxZplug');
+load('data/dataBNet_12.06.26__12.07.15.mat', 'timeline','bNet', 'maxZplug');
 
 %disp('LEARNING PHASE');
 fprintf('Computing the <strong>Conditional Probability tables (CPT)</strong> for each node...\n');
@@ -23,6 +23,7 @@ faultValue=1000;
 
 % Load data and formatted according to the Bayesian network
 bNetZplug = createBnetZplug(bNet, maxZplug); 
+
 % Fault injection
 %disp('Fault injection...');
 [dataFault, indexMat] = createDataFault(bNetZplug(:,startI:endI), startFault, faultValue, 'complete');
@@ -34,9 +35,9 @@ bNetZplug = createBnetZplug(bNet, maxZplug);
 bnetCPT = computeCPT(dataLearning(:,1:startFault-1),minmaxVector);
 
 
-%save 'CPT_hiddenZplug.mat'
+%save ('data/CPT_hiddenZplug.mat')
  
-%load('CPT_hiddenZplug.mat', 'bnetCPT');
+%load('data/CPT_hiddenZplug.mat');
 
 disp('------------------------------------------------------------------------------------');
 %disp('INFERENCE PHASE');
