@@ -26,17 +26,14 @@ loadBNTlibrary
 ```
 
 ### Usage
+
 To generate the Bayesian Network(s)
 ```
 dataAcquisition
 ```
 
-To compute the Conditional Probability Tables (CPTs) of each node of the Bayesian Network
-```
-calculateCPT
-```
-
-To compute the Full Joint Distribution of the Bayesian Network
+To compute the Conditional Probability Tables (CPTs) of each node of the Bayesian Network and 
+to compute the Full Joint Distribution of the Bayesian Network:
 ```
 fullJointDistribution
 ```
@@ -192,7 +189,8 @@ To compute the Conditional Probability Tables (CPTs) of each node of the Bayesia
 calculateCPT
 ```
 
-To compute the Full Joint Distribution of the Bayesian Network
+To compute the Conditional Probability Tables (CPTs) of each node of the Bayesian Network and 
+to compute the Full Joint Distribution of the Bayesian Network:
 ```
 fullJointDistribution
 ```
