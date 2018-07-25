@@ -185,12 +185,7 @@ All the data is saved in the MATLAB formatted data file `bNet_data.mat`.
 ### Bayesian Inference: Fault-Detection
 
 To compute the Conditional Probability Tables (CPTs) of each node of the Bayesian Network
-```
-calculateCPT
-```
-
-To compute the Conditional Probability Tables (CPTs) of each node of the Bayesian Network and 
-to compute the Full Joint Distribution of the Bayesian Network:
+and to compute the Full Joint Distribution of the Bayesian Network:
 ```
 fullJointDistribution
 ```
