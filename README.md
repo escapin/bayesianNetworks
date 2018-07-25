@@ -94,9 +94,9 @@ its different values for each combination of values of its parents.
 
 ### Our Bayesian Network
 
-The topology (structure) and the parameters of each CPD can be both
-learned from data.  However, since learning structure is much harder
-than learning parameters, we have designed the topology of the network
+The topology (structure) of the bayesian network and the parameters of each CPD can be both
+learned from data.  However, since learning the structure is much harder
+than learning the parameters of the CPD, we have designed the topology of the network
 according to the method given in Chapter 14.2 of the book
 _[Artificial Intelligence: A Modern Approach](http://aima.cs.berkeley.edu/)_.
 
@@ -133,7 +133,7 @@ each column a sample gathered from every sensor at a given point of
 time.
 
 As the sensors in the room provide samples in various format and with a
-different timestamps, to collect data in a coherent way we have
+different timestamps, to collect data consistently we have
 performed the following steps:
 
 1. We have defined a timeline **T** of timestamps based on when a new
