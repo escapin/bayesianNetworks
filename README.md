@@ -6,19 +6,19 @@ values in a environment.
 ### Dependencies
 
 * MATLAB (https://www.mathworks.com/products/matlab.html).
-* The Matworks database toolbox (https://www.mathworks.com/products/database.html)
+* The Matworks database toolbox (https://www.mathworks.com/products/database.html).
 * The **Bayesian Network Toolbox (BNT)** for MATLAB (https://github.com/bayesnet/bnt).
 * Optional: a SQLite browser to browse the database, e.g., https://sqlitebrowser.org/.
 
 ### Development environment
 
-Download the `Bayesian Net Toolbox`:
+Download the `Bayesian Net Toolbox` (BNT):
 
  ```
  make
  ```
 
-Open MATLAB, navigate to this working folder, and load these libraries
+Open MATLAB, navigate to this working folder, and load the BNT library
 by running:
 
 ```
