@@ -12,11 +12,12 @@ values in a environment.
 
 ### Development environment
 
-Download the `Bayesian Net Toolbox` (BNT):
+Download the `Bayesian Net Toolbox` (BNT) by typing:
 
  ```
  make
  ```
+in the terminal.
 
 Open MATLAB, navigate to this working folder, and load the BNT library
 by running:
